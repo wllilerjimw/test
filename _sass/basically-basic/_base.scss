@@ -1,0 +1,241 @@
+/* ==========================================================================
+   个人字体
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Pennon_ver0.3';
+    /* 为字体起一个自定义的名字 */
+    src: url('/fonts/Pennon_ver0.3-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Pennon_ver0.3-Swash-2';
+  /* 为字体起一个自定义的名字 */
+  src: url('/fonts/Pennon_ver0.3-Swash-2.woff') format('woff');
+}
+
+@font-face {
+font-family: 'KizutamaBlogTitle';
+  /* 为字体起一个自定义的名字 */
+    src: url('/fonts/KizutamaBlogTitle-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Eli.kusa.0.95-demo';
+    /* 为字体起一个自定义的名字 */
+    src: url('/fonts/Eli.kusa.0.95-demo-Regular.woff') format('woff');
+
+  font-family: "toppan-bunkyu-midashi-min-st", serif;
+    font-weight: 900;
+    font-style: normal;
+
+  font-family: "tbudmincho-std", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+  font-family: "adelle", serif;
+    font-weight: 100;
+    font-style: normal;
+
+  font-family: "adelle", serif;
+    font-weight: 100;
+    font-style: italic;
+
+  font-family: "adelle", serif;
+    font-weight: 700;
+    font-style: normal;
+
+  font-family: "adelle", serif;
+    font-weight: 700;
+    font-style: italic;
+
+  font-family: "adelle", serif;
+    font-weight: 400;
+    font-style: italic;
+  
+  
+}
+
+.EliKusaTitle {
+  font-family: 'Eli.kusa.0.95-demo';
+  font-weight: 100;
+  font-feature-settings: "ss01", "ss02";
+  font-size: 3.0rem;
+  font-weight: light;
+  color: #e25b7e
+}
+
+.EliKusaSwash {
+  font-family: 'Eli.kusa.0.95-demo';
+  font-weight: 100;
+  font-feature-settings: "ccmp","liga","dlig";
+  font-size: 2.0rem;
+  font-weight: normal
+}
+
+.EliKusaSwash2 {
+  font-family: 'Eli.kusa.0.95-demo';
+  font-weight: 100;
+  font-feature-settings: "ccmp", "liga", "dlig";
+  font-size: 2.0rem;
+  font-weight: normal;
+  color: #e25b7e
+}
+
+.EliKusaText {
+  font-family: 'Eli.kusa.0.95-demo';
+  font-weight: 100;
+  font-feature-settings: "ccmp", "liga", "dlig","lnum";
+  font-weight: normal
+}
+
+.EliKusaSwashO {
+  font-family: 'Eli.kusa.0.95-demo';
+  font-weight: 100;
+  font-feature-settings: "ccmp", "liga", "dlig","onum";
+  font-size: 2.0rem;
+  font-weight: normal
+}
+
+.PennonTitle {
+  font-family: 'Pennon_ver0.3-Swash-2';
+  font-size: 4.0rem;
+  font-weight: 100;
+  color: #e25b7e;
+}
+
+.PennonText {
+  font-family: 'Pennon_ver0.3';
+  position: relative;
+  font-size: 1.3rem;
+  bottom: 0.15em;
+}
+
+.responsive-image {
+  max-width:60%;
+  height: auto;
+}
+
+
+/* ==========================================================================
+   Base elements
+   ========================================================================== */
+
+html {
+  @include fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size);
+}
+
+body {
+  background: $background-color;
+  color: $text-color;
+}
+
+blockquote,
+q {
+  color: tint($text-color, 40%);
+  font-style: italic;
+
+  cite {
+    font-size: 80%;
+    font-style: normal;
+    font-weight: bold;
+
+    &::before {
+      padding-right: 0.25rem;
+      content: '\2014';
+    }
+  }
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: $monospace-font-family;
+}
+
+kbd {
+  display: inline-block;
+  margin: 0 0.125em;
+  padding: 0.125em 0.5em;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 3px;
+  background-color: rgb(247, 247, 247);
+  text-shadow: 0 1px 0 #fff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25), inset 0 0 0 2px #fff;
+}
+
+p,
+h4,
+h5,
+h6 {
+  font-family: "KizutamaBlogTitle", "adelle", 'BIZ UDMincho', serif;
+  text-rendering: optimizeLegibility; /* enable common ligatures and kerning */
+}
+
+h1,
+h2,
+h3 {
+  color: #e25b7e;
+  font-family: $base-font-family;
+    font-weight: 700;
+  @include fluid-type($min-vw, $max-vw, $h1-min, $h1-max);
+}
+
+h2 {
+  @include fluid-type($min-vw, $max-vw, $h2-min, $h2-max);
+}
+
+h3 {
+  @include fluid-type($min-vw, $max-vw, $h3-min, $h3-max);
+}
+
+h4 {
+  @include fluid-type($min-vw, $max-vw, $h4-min, $h4-max);
+}
+
+h5 {
+  @include fluid-type($min-vw, $max-vw, $h5-min, $h5-max);
+}
+
+h6 {
+  @include fluid-type($min-vw, $max-vw, $h6-min, $h6-max);
+}
+
+dt {
+  font-weight: bold;
+
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+}
+
+dd {
+  margin: 0;
+}
+
+pre {
+  @include fluid-type($min-vw, $max-vw, 12px, 14px);
+}
+
+figcaption {
+  margin: 0.5rem 0;
+  font-size: 80%;
+}
+
+a {
+  font-feature-settings: "lnum";
+  color: $accent-color;
+
+  &:hover {
+    color: shade($accent-color, 25%);
+  }
+}
+
+// *:focus {
+//   border-color: $accent-color;
+//   outline: none;
+//   box-shadow: 0 0 10px $accent-color;
+// }
+
+
