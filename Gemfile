@@ -35,3 +35,10 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 
 gem "webrick"
+
+group :jekyll_plugins do
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+  gem "jekyll-paginate"
+  gem "jekyll-algolia"
+end
